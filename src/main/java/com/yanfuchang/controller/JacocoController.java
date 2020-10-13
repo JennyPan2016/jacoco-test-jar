@@ -22,7 +22,20 @@ public class JacocoController {
             return "daling";
         }else if ("dalingjia".equals(jacoco.getData())){
             return "dalingjia";
+        }else if ("add".equals(jacoco.getData())){
+            return "add";
         }
         return "Hello world";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/new", method=RequestMethod.POST, consumes = "application/json")
+    public String jacoco2(
+            @RequestBody Jacoco jacoco
+    ){
+        if ("new".equals(jacoco.getData())) {
+            return "new";
+        }
+        return "Hello world new";
     }
 }
