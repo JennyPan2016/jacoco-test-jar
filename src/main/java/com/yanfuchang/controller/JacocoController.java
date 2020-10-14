@@ -17,13 +17,11 @@ public class JacocoController {
     @RequestMapping(value = "/test", method=RequestMethod.POST, consumes = "application/json")
     public String jacoco(
             @RequestBody Jacoco jacoco
-            ){
+    ){
         if ("daling".equals(jacoco.getData())) {
             return "daling";
         }else if ("dalingjia".equals(jacoco.getData())){
             return "dalingjia";
-        }else if ("add".equals(jacoco.getData())){
-            return "add";
         }
         return "Hello world";
     }
