@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="zh"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JacocoController2.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">jacoco-test-jar</a> &gt; <a href="index.source.html" class="el_package">com.yanfuchang.controller</a> &gt; <span class="el_source">JacocoController2.java</span></div><h1>JacocoController2.java</h1><pre class="source lang-java linenums">+ package com.yanfuchang.controller;
++ 
++ 
++ import com.yanfuchang.bean.Jacoco;
++ import org.springframework.stereotype.Controller;
++ import org.springframework.web.bind.annotation.RequestBody;
++ import org.springframework.web.bind.annotation.RequestMapping;
++ import org.springframework.web.bind.annotation.RequestMethod;
++ import org.springframework.web.bind.annotation.ResponseBody;
++ 
++ 
++ @Controller
++ @RequestMapping(&quot;/old_jacoco2&quot;)
++ public class JacocoController2 {
++ 
++     @ResponseBody
++     @RequestMapping(value = &quot;/test2&quot;, method=RequestMethod.POST, consumes = &quot;application/json&quot;)
++     public String jacoco(
++             @RequestBody Jacoco jacoco
++     ){
+<span class="pc bpc" id="L21" title="1 of 2 branches missed.">+         if (&quot;daling&quot;.equals(jacoco.getData())) {</span>
+<span class="nc" id="L22">+             return &quot;daling&quot;;</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">+         }else if (&quot;dalingjia&quot;.equals(jacoco.getData())){</span>
+<span class="fc" id="L24">+             return &quot;dalingjia&quot;;</span>
+<span class="pc bpc" id="L25" title="1 of 2 branches missed.">+         }else if (&quot;add&quot;.equals(jacoco.getData())){</span>
+<span class="nc" id="L26">+             return &quot;add&quot;;</span>
++         }
+<span class="fc" id="L28">+         return &quot;Hello world&quot;;</span>
++     }
++ 
++     @ResponseBody
++     @RequestMapping(value = &quot;/add&quot;, method=RequestMethod.POST, consumes = &quot;application/json&quot;)
++     public String jacoco2(
++             @RequestBody Jacoco jacoco
++     ){
+<span class="fc bfc" id="L36" title="All 2 branches covered.">+         if (&quot;add&quot;.equals(jacoco.getData())) {</span>
+<span class="fc" id="L37">+             return &quot;add&quot;;</span>
++         }
+<span class="fc" id="L39">+         return &quot;need add&quot;;</span>
++     }
++ }
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> ${qualified.bundle.version}</span></div></body></html>
