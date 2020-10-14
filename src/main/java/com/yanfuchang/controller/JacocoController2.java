@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-@RequestMapping("/old_jacoco")
-public class JacocoController {
+@RequestMapping("/old_jacoco2")
+public class JacocoController2 {
 
     @ResponseBody
-    @RequestMapping(value = "/test", method=RequestMethod.POST, consumes = "application/json")
+    @RequestMapping(value = "/test2", method=RequestMethod.POST, consumes = "application/json")
     public String jacoco(
             @RequestBody Jacoco jacoco
-            ){
+    ){
         if ("daling".equals(jacoco.getData())) {
             return "daling";
         }else if ("dalingjia".equals(jacoco.getData())){
@@ -26,5 +26,16 @@ public class JacocoController {
             return "add";
         }
         return "Hello world";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/add", method=RequestMethod.POST, consumes = "application/json")
+    public String jacoco2(
+            @RequestBody Jacoco jacoco
+    ){
+        if ("add".equals(jacoco.getData())) {
+            return "add";
+        }
+        return "need add";
     }
 }
