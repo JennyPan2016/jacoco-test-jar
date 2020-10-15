@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @Controller
-@RequestMapping("/old_jacoco3")
-public class JacocoController3 {
+@RequestMapping("/old_jacoco4")
+public class JacocoController4 {
 
     @ResponseBody
-    @RequestMapping(value = "/test3", method=RequestMethod.POST, consumes = "application/json")
-    public String jacoco31(
+    @RequestMapping(value = "/test4", method=RequestMethod.POST, consumes = "application/json")
+    public String jacoco41(
             @RequestBody Jacoco jacoco
     ){
         if ("daling".equals(jacoco.getData())) {
@@ -29,8 +29,8 @@ public class JacocoController3 {
     }
 
     @ResponseBody
-    @RequestMapping(value = "/add3", method=RequestMethod.POST, consumes = "application/json")
-    public String jacoco32(
+    @RequestMapping(value = "/add4", method=RequestMethod.POST, consumes = "application/json")
+    public String jacoco42(
             @RequestBody Jacoco jacoco
     ){
         if ("add".equals(jacoco.getData())) {
