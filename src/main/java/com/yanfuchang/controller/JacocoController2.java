@@ -22,8 +22,10 @@ public class JacocoController2 {
             return "daling";
         }else if ("dalingjia".equals(jacoco.getData())){
             return "dalingjia";
-        }else if ("add".equals(jacoco.getData())){
-            return "add";
+        }else if ("test2".equals(jacoco.getData())){
+            return "add test2";
+        }else if ("test3".equals(jacoco.getData())){
+            return "add test3";
         }
         return "Hello world";
     }
